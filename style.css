@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #111;
+}
+
+.logo img {
+  max-width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00aaff;
+}
+
+.sign-in-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #00aaff;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.sign-in-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-color: rgba(0, 170, 255, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.sign-in-btn:hover::before {
+  transform: translateX(0);
+}
+
+.sign-in-btn:hover {
+  color: #111;
+}
+
+.hero {
+  background-color: #000000;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+button {
+  background-color: #00aaff;
+  color: #fff;
+  border: 1px solid #00aaff;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(0, 170, 255, 0.5);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+  color: #000;
+}
+
+.about-us {
+  padding: 50px 20px;
+  background-color: #0e0e0e;
+  text-align: center;
+  min-height: 300px;
+}
+
+.experiences {
+  padding: 70px 20px;
+  background-color: #111;
+  text-align: center;
+  min-height: 850px;
+}
+
+.experience-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  position: relative;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  min-height: 300px;
+  overflow: hidden;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card .description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+.card:hover .description {
+  opacity: 1;
+}
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #111;
+  margin-top: 100px;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  color: #00aaff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.social-media {
+  margin: 15px 0;
+}
+
+.social-media a {
+  margin: 0 15px;
+  color: #00aaff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #fff;
+}
+
+.newsletter {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.newsletter button {
+  background-color: #00aaff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #0088cc;
+}
